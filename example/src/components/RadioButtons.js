@@ -1,7 +1,6 @@
 import React from 'react'
 
 const RadioButtons = (props) => {
-    console.log(props);
     return(
         <div className="card-radio-wrap">
             {props.options.map((option)=>{

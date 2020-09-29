@@ -7,7 +7,7 @@ const Dropdown = (props) =>{
             {props.isMandatory? <label className="select-label-error">Enter City</label> : null}
             <select className="select-dropdown">
                 {props.option.map((option)=>{
-                  return <option className="select-dropdown-option">{option}</option>  
+                  return <option key={option} className="select-dropdown-option">{option}</option>  
                 })}
             </select>
         </div>

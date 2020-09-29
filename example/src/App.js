@@ -12,6 +12,11 @@ import CardHeader from './components/CardHeader'
 import CardText from './components/CardText'
 import RadioButtons from './components/RadioButtons'
 import Dropdown from './components/Dropdown'
+import Textinput from './components/Textinput'
+import TextArea from './components/TextArea'
+import Banner from './components/Banner'
+import DescriptionText from './components/DescriptionText'
+import SubmitBar from './components/SubmitBar'
 
 import './index.css'
 
@@ -46,6 +51,20 @@ const App = () => {
           <RadioButtons options={radioOptions} />
 
           <Dropdown label="City" isMandatory={true} option={dropdownOptions} />
+
+          <Textinput placeholder={null} isMandatory={false} />
+          <Textinput placeholder={null} isMandatory={true} />
+          <TextArea />
+
+          {/*skipping images upload for now  <UploadImages /> */}
+
+          <Banner successful={true} complaintNumber="02/09/2020/051705" message="Complaint Submitted"/>
+          <Banner successful={false} message="Complaint Not Submitted"/>
+
+          <DescriptionText text="The notification along with complaint number is sent to your registered mobile number. You can track the complaint status using mobile or web app."/>
+
+          <SubmitBar label="Next"/>
+
 
         </Card>
       </AppContainer>
