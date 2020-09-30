@@ -2,7 +2,7 @@ import React from 'react'
 
 const SubmitBar = (props)=>{
     return(
-        <div class="submit-bar">
+        <div className="submit-bar">
             <header>{props.label}</header>
         </div>
     )   

@@ -1027,7 +1027,8 @@ input-otp[type=number] {
   outline: 0;
   height: 2.5rem;
   width: 2.5rem;
-  text-align: center; }
+  text-align: center;
+  margin-right: 8px; }
 
 .input-otp-label-wrap {
   margin-bottom: 16px; }

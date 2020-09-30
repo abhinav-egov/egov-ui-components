@@ -27,13 +27,8 @@ const Error = (props) =>{
 }
 
 const Banner = (props) =>{
-    if(props.successful){
-        return <Successful props={props}/>
-    }
-
-    else{
-        return <Error props={props}/>
-    }
+    
+    return props.successful ? <Successful props={props}/> : <Error props={props}/>
 
 }
 
