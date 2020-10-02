@@ -76,6 +76,10 @@ function onDelete(e){
   console.log(e.target)
 }
 
+function onOTPInput(e){
+  console.log(e.target)
+}
+
 const App = () => {
   return (
     <Body>
@@ -143,14 +147,14 @@ const App = () => {
 
         <div className="card">
           <div className="input-otp-label-wrap">
-            <p className="input-otp-label">Enter the OTP sent to 
+            <p className="input-otp-label">Enter the OTP sent to{" "}
               <span className="input-otp-label-mob">
                 +91 - 9876453444
               </span>
             </p>
           </div>
 
-          <OTPInput length={4}/>
+          <OTPInput onInput={onOTPInput} length={4}/>
 
           <div className="input-otp-desc-wrap">
             <p className="input-otp-desc">

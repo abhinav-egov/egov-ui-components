@@ -4,8 +4,8 @@ import deleteBtn from '../svg/close.svg'
 
 const MiniUpload = (props) =>{
     return(
-        <div class="upload-camera-img-mini-wrap">
-            <img src={camera} class="upload-camera-img-mini" alt="upload"/>
+        <div className="upload-camera-img-mini-wrap">
+            <img src={camera} className="upload-camera-img-mini" alt="upload"/>
         </div>
     )
 }
