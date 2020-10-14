@@ -4,18 +4,21 @@ import Body from './components/Body'
 import TopBar from './components/TopBar'
 import AppContainer from './components/AppContainer'
 import Header from './components/Header'
-import Label from './components/Label'
+import LinkLabel from './components/LinkLabel'
 import BackButton from './components/BackButton'
 import Card from './components/Card'
-import CardLabel from './components/CardLabel'
+import CardCaption from './components/CardCaption'
 import CardHeader from './components/CardHeader'
 import CardText from './components/CardText'
+import CardLabel from './components/CardLabel'
+import CardLabelError from './components/CardLabelError'
+import CardTextButton from './components/CardTextButton'
 import RadioButtons from './components/RadioButtons'
 import Dropdown from './components/Dropdown'
 import Textinput from './components/Textinput'
 import TextArea from './components/TextArea'
 import Banner from './components/Banner'
-import DescriptionText from './components/DescriptionText'
+import CardSubHeader from './components/CardSubHeader'
 import SubmitBar from './components/SubmitBar'
 import {StatusTable, Row, LastRow} from './components/StatusTable'
 import DisplayPhotos from './components/DisplayPhotos'
@@ -79,21 +82,23 @@ function onDelete(e){
 function onOTPInput(e){
   console.log(e.target)
 }
-
 const App = () => {
   return (
     <Body>
       <TopBar />
       <AppContainer>
         <Header>Quick Pay</Header>
-        <Label>Property Tax</Label>
+        <LinkLabel>Property Tax</LinkLabel>
         <BackButton>Back</BackButton>
         <Card>
-          <CardLabel>Garbage</CardLabel>
+          <CardCaption>Garbage</CardCaption>
           <CardHeader>Choose Complaint Type</CardHeader>
-          <CardText>Select otexttion related to your complaint from the list given below. If the complaint type you are looking for is not listed select others</CardText>
-
+          <CardText>Select text related to your complaint from the list given below. If the complaint type you are looking for is not listed select others</CardText>
+          <CardLabel>Moholla *</CardLabel>
           <RadioButtons options={radioOptions} />
+
+          <CardLabel>City *</CardLabel>
+          <CardLabelError>Enter City</CardLabelError>
 
           <Dropdown label="City" isMandatory={true} option={dropdownOptions} />
 
@@ -107,14 +112,15 @@ const App = () => {
           <Banner successful={true} complaintNumber="02/09/2020/051705" message="Complaint Submitted"/>
           <Banner successful={false} message="Complaint Not Submitted"/>
 
-          <DescriptionText text="The notification along with complaint number is sent to your registered mobile number. You can track the complaint status using mobile or web app."/>
+          <CardText>The notification along with complaint number is sent to your registered mobile number. You can track the complaint status using mobile or web app.</CardText>
 
           <SubmitBar label="Next"/>
         </Card>
 
-        <div className="complaint-sum-card">
-            <header>Burning of Garbage</header>
-            
+        <Card>
+          <CardSubHeader>
+            Burning of Garbage
+          </CardSubHeader>
             {/* hard coded table example  */}
             {/* <StatusTable>
               <Row label="Complaint No." text="02/09/2020/057105" />
@@ -126,51 +132,41 @@ const App = () => {
             <StatusTable dataObject={sampleTableObject}></StatusTable>
 
             <DisplayPhotos srcs={imagesSourceArray}/>
-          </div>
+        </Card>
 
-        <div className="checkpoint-wrap">
-          <h1>Complaint Timeline</h1>
+        <Card>
+          <CardSubHeader>Complaint Timeline</CardSubHeader>
           <ConnectingCheckPoints>
             <CheckPoint label="Pending for Assignment" isCompleted={true}/>
-            <CheckPoint label="Complaint Filed"/>
+            <CheckPoint label="Complaint Filed" info="12/08/2020"/>
           </ConnectingCheckPoints>
-        </div>
+        </Card>
 
-        <div className="card-feedback-form-wrap">
-          <p className="card-text">How would you rate your experience with us?</p>
+        <Card>
+          <CardLabel>How would you rate your experience with us?</CardLabel>
           
           <Rating maxRating={5} currentRating={2} onFeedback={onFeedback}/>
 
+          <CardLabel>What was good?</CardLabel>
+
           <CheckBox label="Service" />      
+        </Card>
 
-        </div>
-
-        <div className="card">
-          <div className="input-otp-label-wrap">
-            <p className="input-otp-label">Enter the OTP sent to{" "}
-              <span className="input-otp-label-mob">
-                +91 - 9876453444
-              </span>
-            </p>
-          </div>
+        <Card>
+          <CardText>Enter the OTP sent to +91 - 9876453444</CardText>
 
           <OTPInput onInput={onOTPInput} length={4}/>
 
-          <div className="input-otp-desc-wrap">
-            <p className="input-otp-desc">
-              Request another OTP in{" "}
-              <span className="input-otp-desc-time">
-                25
-              </span> seconds
-            </p>
-          </div>
-          <div className="input-otp-resend-wrap">
-            <p className="input-otp-resend">Resend OTP</p>
-          </div>
-          
-          <p className="card-text">Click and hold to drop the pin to complaint location. If you are not able to pin the location you can skip the continue for next step.</p>
+          <CardText>
+            Request another OTP in 25 seconds
+          </CardText>
+            <CardTextButton>Resend OTP</CardTextButton>
+        </Card>
+        <Card>
+          <CardHeader>Pin Complaint Location</CardHeader>
+          <CardText>Click and hold to drop the pin to complaint location. If you are not able to pin the location you can skip the continue for next step.</CardText>
           <LocationSearch />
-        </div>
+        </Card>
         
       </AppContainer>
     </Body>

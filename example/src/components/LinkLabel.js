@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Label = (props) =>{
+const LinkLabel = (props) =>{
     return(
         <label className="link-label">{props.children}</label>
     )
 }
 
-export default Label
+export default LinkLabel

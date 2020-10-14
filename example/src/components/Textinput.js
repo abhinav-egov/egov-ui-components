@@ -4,8 +4,8 @@ const TextInput = (props) =>{
     return(
         <React.Fragment>
             { props.isMandatory ?
-                (<input type="text" className="card-textinput-error" placeholder={props.placeholder}/>) :
-                (<input type="text" className="card-textinput" placeholder={props.placeholder}/>)
+                (<input type="text" className="card-input-error" placeholder={props.placeholder}/>) :
+                (<input type="text" className="card-input" placeholder={props.placeholder}/>)
             }
         </React.Fragment>
     )

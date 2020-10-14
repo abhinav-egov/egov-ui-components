@@ -2,8 +2,8 @@ import React from 'react'
 
 export const LastRow = (props) =>{
     return(
-        <div className="data-table-row-last">
-              <label>{props.label}</label>
+        <div className="row-last">
+              <h2>{props.label}</h2>
               <p>{props.text}</p>
         </div>
     )
@@ -11,8 +11,8 @@ export const LastRow = (props) =>{
 
 export const Row = (props) =>{
     return(
-        <div className="data-table-row">
-            <label>{props.label}</label>
+        <div>
+            <h2>{props.label}</h2>
             <p>{props.text}</p>
         </div>
     )
@@ -25,7 +25,7 @@ export const StatusTable = (props) =>{
                 {Object.keys(props.dataObject).map((name, index)=>{
                     if(++index === Object.keys(props.dataObject).length){
                         return(
-                            <LastRow key={name} label={name} text={props.dataObject[name]}/>    
+                            <LastRow key={name} label={name} text={props.dataObject[name]} />    
                         )
                     }
                     return(

@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardLabel = (props) =>{
     return(
-        <label className="card-selected-label">{props.children}</label>
+        <h2 className="card-label">{props.children}</h2>
     )
 }
 

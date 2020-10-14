@@ -2,13 +2,13 @@ import React from 'react'
 
 const RadioButtons = (props) => {
     return(
-        <div className="card-radio-wrap">
+        <div className="radio-wrap">
             {props.options.map((option)=>{
                 return(
                     <div key={option}>
-                        <span className="card-radio-btn-wrap">
-                            <input className="card-radio-btn" type="radio" value={option} />
-                            <span className="card-radio-btn-checkmark"></span>
+                        <span className="radio-btn-wrap">
+                            <input className="radio-btn" type="radio" value={option} />
+                            <span className="radio-btn-checkmark"></span>
                         </span>
                         <label>{option}</label>
                     </div>
