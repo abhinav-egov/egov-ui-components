@@ -1,8 +1,8 @@
 import React from 'react'
 // import { ExampleComponent, } from 'egov-ui-components'
+import { AppContainer } from "egov-ui-components"
 import Body from './components/Body'
 import TopBar from './components/TopBar'
-import AppContainer from './components/AppContainer'
 import Header from './components/Header'
 import LinkLabel from './components/LinkLabel'
 import BackButton from './components/BackButton'
