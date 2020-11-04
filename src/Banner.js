@@ -1,6 +1,6 @@
 import React from "react";
-import {success} from './svgindex'
-import {error} from './svgindex'
+import { success } from './Icons'
+import { error } from './Icons'
 
 const Successful = (props) => {
     return(

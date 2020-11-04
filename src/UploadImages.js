@@ -1,6 +1,6 @@
 import React from "react";
-import {camera} from './svgindex'
-import {deleteBtn} from './svgindex'
+import { camera } from './Icons'
+import { deleteBtn } from './Icons'
 
 const MiniUpload = (props) =>{
     return(
