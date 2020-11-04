@@ -1,11 +1,7 @@
 import React from "react";
-import { ArrowLeft} from "./svgindex"
-const BackButton = (props) =>{
-    return(
-        // <div className="back-btn">
-        //     <label className="back-btn-pointer">&#x25c4;</label>
-        //     <p>{props.children}</p>
-        // </div>
+import { ArrowLeft } from "./Icons"
+const BackButton = (props) => {
+    return (
         <div className="back-btn2">
             <ArrowLeft />
             <p>Back</p>
