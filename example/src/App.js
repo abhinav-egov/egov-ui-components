@@ -32,6 +32,7 @@ import {
 } from "egov-ui-components"
 
 import garbageimage from "./img/garbage.webp";
+import logo from './img/msevalogo.png'
 import './index.css'
 
 const radioOptions = [
@@ -87,7 +88,7 @@ function onOTPInput(e){
 const App = () => {
   return (
     <Body>
-      <TopBar />
+      <TopBar img={logo} />
       <AppContainer>
         <Header>Quick Pay</Header>
         <LinkLabel>Property Tax</LinkLabel>

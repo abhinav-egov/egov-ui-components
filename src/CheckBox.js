@@ -1,12 +1,13 @@
 import React from "react";
-import {check} from './svgindex'
+import {CheckSvg} from './svgindex'
 
 const CheckBox = (props) =>{
     return(
         <div className="checkbox-wrap">
             <input type="checkbox" />
             <p className="custom-checkbox">
-              <img src={check} alt="" />
+              {/* <img src={check} alt="" /> */}
+              <CheckSvg />
             </p>
             <p className="label">{props.label}</p>
         </div>

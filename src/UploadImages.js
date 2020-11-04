@@ -1,11 +1,12 @@
 import React from "react";
-import {camera} from './svgindex'
-import {deleteBtn} from './svgindex'
+import {CameraSvg} from './svgindex'
+import {DeleteBtn} from './svgindex'
 
 const MiniUpload = (props) =>{
     return(
         <div className="upload-img-container">
-            <img src={camera} className="upload-camera-img" alt="upload"/>
+            {/* <img src={camera} className="upload-camera-img" alt="upload"/> */}
+            <CameraSvg className="upload-camera-img"/>
         </div>
     )
 }
@@ -18,7 +19,8 @@ const UploadImages = (props) =>{
                 {props.thumbnails.map((thumbnail,index)=>{                    
                     return (
                         <div key={index}>
-                            <img src={deleteBtn} onClick={props.onDelete} className="delete" alt="delete"/>
+                            {/* <img src={deleteBtn} onClick={props.onDelete} className="delete" alt="delete"/> */}
+                            <DeleteBtn onClick={props.onDelete} className="delete" />
                             <img src={thumbnail} alt="uploaded thumbnail"/>
                         </div>
                     )
@@ -31,7 +33,8 @@ const UploadImages = (props) =>{
     else{
         return(
             <div className="upload-wrap" onClick={props.onUpload}>
-                <img src={camera} alt="upload"/> 
+                {/* <img src={camera} alt="upload"/>  */}
+                <CameraSvg />
             </div>
         )
     }

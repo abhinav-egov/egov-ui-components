@@ -26,6 +26,7 @@ import CheckBox from './CheckBox'
 import OTPInput from './OTPInput'
 import LocationSearch from './LocationSearch'
 import UploadImages from './UploadImages'
+
 import './index.css'
 
 export {

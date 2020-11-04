@@ -1,11 +1,9 @@
 import React from "react";
 
-import logo from './img/msevalogo.png'
-
-const TopBar = () =>{
+const TopBar = (props) =>{
     return(
         <div className="navbar">
-            <img src={logo} alt="mSeva Logo"/>
+            <img src={props.img} alt="mSeva Logo"/>
         </div>
     )
 }

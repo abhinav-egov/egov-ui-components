@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {searchicon} from './svgindex'
+import {SearchIconSvg} from './svgindex'
 
 const LocationSearch = (props) =>{
 
@@ -91,7 +91,8 @@ const LocationSearch = (props) =>{
   return(
       <div className="map-wrap">
         <div className="map-search-bar-wrap">
-          <img src={searchicon} className="map-search-bar-icon" alt=""/>
+          {/* <img src={searchicon} className="map-search-bar-icon" alt=""/> */}
+          <SearchIconSvg />
           <input id="pac-input" className="map-search-bar" type="text" placeholder="Search Address"/>
         </div>
         <div id="map" className="map" ></div>  

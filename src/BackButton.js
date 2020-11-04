@@ -7,8 +7,7 @@ const BackButton = (props) =>{
         //     <p>{props.children}</p>
         // </div>
         <div className="back-btn2">
-            <div onClick={(e)=> console.log(e.target)}>{ArrowLeft}</div>
-            <img src={ArrowLeft} alt="Arrow Left"/>
+            <ArrowLeft />
             <p>Back</p>
         </div>
     )

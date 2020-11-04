@@ -20,7 +20,8 @@ const Dropdown = (props) =>{
         <div className="select-wrap">
             <div onClick={dropdownSwitch} className={dropdownStatus? "select-active" : "select"}>
               {selectedOption? <p>{selectedOption}</p> : <p>Select {props.label} {props.isMandatory ? "*" : null}</p>}
-              <img src={ArrowDown} alt="Arrow Down"/>
+              {/* <img src={ArrowDown} alt="Arrow Down"/> */}
+              <ArrowDown />
             </div>
             {dropdownStatus && <div className="options-card">
             {props.option.map((option)=>{
