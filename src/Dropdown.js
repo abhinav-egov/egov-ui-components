@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ArrowDown from "./svg/arrowdown.svg"
+import {ArrowDown} from "./svgindex"
 
 const Dropdown = (props) =>{
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 export const CheckPoint = (props) =>{
     return(
         <div className={props.isCompleted ? "checkpoint-done": "checkpoint"}>

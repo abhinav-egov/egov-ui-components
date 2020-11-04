@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
-import starfilled from './svg/starfilled.svg'
-import starempty from './svg/starempty.svg'
+import {starfilled} from './svgindex'
+import {starempty} from './svgindex'
 
 const Rating = (props) =>{
     var stars = []

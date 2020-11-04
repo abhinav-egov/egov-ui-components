@@ -1,3 +1,5 @@
+import React from "react";
+
 const OTPInput = (props) =>{
     if(!props.length){
         console.warn("OTPInput Component requires length prop")

@@ -1,3 +1,5 @@
+import React from "react";
+
 const DisplayPhotos = (props) =>{
     return(
         <div className="photos-wrap">

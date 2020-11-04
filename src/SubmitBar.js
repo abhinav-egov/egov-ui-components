@@ -1,3 +1,5 @@
+import React from "react";
+
 const SubmitBar = (props)=>{
     return(
         <div className="submit-bar">

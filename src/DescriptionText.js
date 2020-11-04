@@ -1,3 +1,5 @@
+import React from "react";
+
 const DescriptionText = (props) =>{
     return(
         <div className="description-wrap">

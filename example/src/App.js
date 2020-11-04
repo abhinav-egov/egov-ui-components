@@ -34,7 +34,6 @@ import {
 import garbageimage from "./img/garbage.webp";
 import './index.css'
 
-
 const radioOptions = [
   "Streetlights",
   "Garbage",

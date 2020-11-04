@@ -1,5 +1,6 @@
-import success from './svg/success.svg'
-import error from './svg/error2.svg'
+import React from "react";
+import {success} from './svgindex'
+import {error} from './svgindex'
 
 const Successful = (props) => {
     return(

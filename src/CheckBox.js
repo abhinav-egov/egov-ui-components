@@ -1,4 +1,5 @@
-import check from './svg/check.svg'
+import React from "react";
+import {check} from './svgindex'
 
 const CheckBox = (props) =>{
     return(

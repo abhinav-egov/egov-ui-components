@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import searchicon from './svg/searchicon.svg'
+import {searchicon} from './svgindex'
 
 const LocationSearch = (props) =>{
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 export const LastRow = (props) =>{
     return(
         <div className="row-last">
