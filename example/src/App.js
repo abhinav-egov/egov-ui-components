@@ -1,36 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { ExampleComponent, } from 'egov-ui-components'
-import Body from './components/Body'
-import TopBar from './components/TopBar'
-import AppContainer from './components/AppContainer'
-import Header from './components/Header'
-import LinkLabel from './components/LinkLabel'
-import BackButton from './components/BackButton'
-import Card from './components/Card'
-import CardCaption from './components/CardCaption'
-import CardHeader from './components/CardHeader'
-import CardText from './components/CardText'
-import CardLabel from './components/CardLabel'
-import CardLabelError from './components/CardLabelError'
-import CardTextButton from './components/CardTextButton'
-import RadioButtons from './components/RadioButtons'
-import Dropdown from './components/Dropdown'
-import Textinput from './components/Textinput'
-import TextArea from './components/TextArea'
-import Banner from './components/Banner'
-import CardSubHeader from './components/CardSubHeader'
-import SubmitBar from './components/SubmitBar'
-import {StatusTable, Row, LastRow} from './components/StatusTable'
-import DisplayPhotos from './components/DisplayPhotos'
-import {ConnectingCheckPoints, CheckPoint} from './components/ConnectingCheckPoints'
-import Rating from './components/Rating'
-import CheckBox from './components/CheckBox'
-import OTPInput from './components/OTPInput'
-import LocationSearch from './components/LocationSearch'
-import UploadImages from './components/UploadImages'
-import garbageimage from "./img/garbage.webp"
-import './index.css'
+import {
+  AppContainer,
+  Body,
+  TopBar,
+  Header,
+  LinkLabel,
+  BackButton,
+  Card,
+  CardCaption,
+  CardHeader,
+  CardText,
+  CardLabel,
+  CardLabelError,
+  CardTextButton,
+  RadioButtons,
+  Dropdown,
+  Textinput,
+  TextArea,
+  Banner,
+  CardSubHeader,
+  SubmitBar,
+  LinkButton,
+  StatusTable, Row, LastRow,
+  DisplayPhotos,
+  ConnectingCheckPoints, CheckPoint,
+  Rating,
+  CheckBox,
+  OTPInput,
+  LocationSearch,
+  UploadImages
+} from "egov-ui-components"
 
+import garbageimage from "./img/garbage.webp";
+import logo from './img/msevalogo.png'
+import './index.css'
 
 const radioOptions = [
   "Streetlights",
@@ -82,10 +86,16 @@ function onDelete(e){
 function onOTPInput(e){
   console.log(e.target)
 }
+
 const App = () => {
+  const [radioSelect, setRadioSelect] = useState(null);
+
+  function onSelectValue(value){
+    setRadioSelect(value)
+  }
   return (
     <Body>
-      <TopBar />
+      <TopBar img={logo} />
       <AppContainer>
         <Header>Quick Pay</Header>
         <LinkLabel>Property Tax</LinkLabel>
@@ -95,7 +105,7 @@ const App = () => {
           <CardHeader>Choose Complaint Type</CardHeader>
           <CardText>Select text related to your complaint from the list given below. If the complaint type you are looking for is not listed select others</CardText>
           <CardLabel>Moholla *</CardLabel>
-          <RadioButtons options={radioOptions} />
+          <RadioButtons options={radioOptions} onSelect={onSelectValue} selectedOption={radioSelect}/>
 
           <CardLabel>City *</CardLabel>
           <CardLabelError>Enter City</CardLabelError>
@@ -115,6 +125,7 @@ const App = () => {
           <CardText>The notification along with complaint number is sent to your registered mobile number. You can track the complaint status using mobile or web app.</CardText>
 
           <SubmitBar label="Next"/>
+          <LinkButton label="skip and continue"/>
         </Card>
 
         <Card>
