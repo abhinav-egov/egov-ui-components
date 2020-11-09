@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { ExampleComponent, } from 'egov-ui-components'
 import {
   AppContainer,
@@ -21,6 +21,7 @@ import {
   Banner,
   CardSubHeader,
   SubmitBar,
+  LinkButton,
   StatusTable, Row, LastRow,
   DisplayPhotos,
   ConnectingCheckPoints, CheckPoint,
@@ -85,7 +86,13 @@ function onDelete(e){
 function onOTPInput(e){
   console.log(e.target)
 }
+
 const App = () => {
+  const [radioSelect, setRadioSelect] = useState(null);
+
+  function onSelectValue(value){
+    setRadioSelect(value)
+  }
   return (
     <Body>
       <TopBar img={logo} />
@@ -98,7 +105,7 @@ const App = () => {
           <CardHeader>Choose Complaint Type</CardHeader>
           <CardText>Select text related to your complaint from the list given below. If the complaint type you are looking for is not listed select others</CardText>
           <CardLabel>Moholla *</CardLabel>
-          <RadioButtons options={radioOptions} />
+          <RadioButtons options={radioOptions} onSelect={onSelectValue} selectedOption={radioSelect}/>
 
           <CardLabel>City *</CardLabel>
           <CardLabelError>Enter City</CardLabelError>
@@ -118,6 +125,7 @@ const App = () => {
           <CardText>The notification along with complaint number is sent to your registered mobile number. You can track the complaint status using mobile or web app.</CardText>
 
           <SubmitBar label="Next"/>
+          <LinkButton label="skip and continue"/>
         </Card>
 
         <Card>

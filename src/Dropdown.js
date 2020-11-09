@@ -5,12 +5,10 @@ const TextField = (props) =>{
     const [value , setValue] = useState("")
 
     useEffect(()=>{
-        console.log("selectredcval", props.selectedVal)
         props.selectedVal ? setValue(props.selectedVal) : null
     },[props.selectedVal])
 
     function inputChange(e){
-        console.log("e.target.value",e.target.value)
         setValue(e.target.value)
         props.setFilter(e.target.value);
     }
@@ -25,8 +23,6 @@ const Dropdown = (props) =>{
     const [dropdownStatus, setDropdownStatus] = useState(false)
     const [selectedOption, setSelectedOption] = useState(null)
     const [filterVal, setFilterVal] = useState("");
-
-    useEffect(()=>console.log("selectedOption",selectedOption) ,[selectedOption])
 
     function dropdownSwitch(){
         var current = dropdownStatus;
